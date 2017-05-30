@@ -6,7 +6,7 @@ namespace tesOOP
 		public readonly int X; //default access modifier is private if it's not declared
 		public readonly int Y; //readonly so the value didn't change when looping program
 
-		public Point(int x, int y) //harus sama *
+		public Point(int x, int y) //harus sama *, general constructor
 		{
 			X = x;
 			Y = y;
