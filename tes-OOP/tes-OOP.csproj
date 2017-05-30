@@ -32,8 +32,13 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Tower.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="Invader.cs" />
+    <Compile Include="Path.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

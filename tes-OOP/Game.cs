@@ -2,7 +2,7 @@
 
 namespace tesOOP
 {
-    class MainClass
+    class Game
     {
         public static void Main(string[] args)
         {
