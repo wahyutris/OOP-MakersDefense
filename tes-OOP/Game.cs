@@ -10,18 +10,18 @@ namespace tesOOP
 			Map map = new Map(8,5);
 
             //declase point class
-            Console.WriteLine("----------- CHECKIN IN MAP -------------");
-            Point point = new Point(4,2);
-            bool isOnMap = map.onMap(point);
-            Console.WriteLine(isOnMap);
-            Console.WriteLine();
+            //Console.WriteLine("----------- CHECKIN IN MAP -------------");
+            //Point point = new Point(4,2);
+            //bool isOnMap = map.onMap(point);
+            //Console.WriteLine(isOnMap);
+            //Console.WriteLine();
 
             //checking distanceTo method
-            Console.WriteLine("----------- DISTANCE IN MAP -------------");
-            Console.WriteLine(point.distanceTo(5, 6));
-            Point point2 = new Point(5, 5);
-            Console.WriteLine(point.distanceTo(point2));
-            Console.WriteLine();
+            //Console.WriteLine("----------- DISTANCE IN MAP -------------");
+            //Console.WriteLine(point.distanceTo(5, 6));
+            //Point point2 = new Point(5, 5);
+            //Console.WriteLine(point.distanceTo(point2));
+            //Console.WriteLine();
 
             //INHERITANCE
             //Console.WriteLine("----------- INHERITANCE IN MAP -------------");
@@ -54,24 +54,26 @@ namespace tesOOP
                 //MapLocation location = path.getLocationAt(0); // sama dengan MapLocation location = new MapLocation(0, 2, map);
                 //Console.WriteLine(location.X + " , " + location.Y);
 
+                Console.WriteLine("----------- POLYMORPHISM -------------");
                 Invader[] invaders =
                 {
                     new Invader(path),
+                    new FastInvader(path),
                     new Invader(path),
+                    new ShieldedInvader(path),
                     new Invader(path),
-                    new Invader(path),
-                    new Invader(path),
-                    new Invader(path),
-                    new Invader(path)
+                    new StrongInvader(path)
                 };
 
                 Tower[] towers =
                 {
                     new Tower(new MapLocation(1,3,map)),
-                    new Tower(new MapLocation(3,3,map)),
-                    new Tower(new MapLocation(5,3,map)),
                     new Tower(new MapLocation(2,1,map)),
-                    new Tower(new MapLocation(4,1,map))
+                    new Tower(new MapLocation(3,3,map)),
+                    new Tower(new MapLocation(4,1,map)),
+                    new Tower(new MapLocation(5,3,map)),
+                    new Tower(new MapLocation(6,1,map)),
+                    new Tower(new MapLocation(7,3,map))
                 };
 
                 Level level = new Level(invaders)
@@ -83,7 +85,7 @@ namespace tesOOP
 
                 Console.WriteLine();
                 Console.WriteLine("----------- RESULT -------------");
-                Console.WriteLine("Players " + (playerStatus ? "won" : "lost"));
+                Console.WriteLine("Players " + (playerStatus ? "WON" : "LOST"));
             }
 
             catch (OutOfBoundsException ex)

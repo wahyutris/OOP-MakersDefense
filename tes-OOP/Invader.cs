@@ -20,7 +20,9 @@ namespace tesOOP
 
         private readonly Path _path;
         private int _pathStep = 0;
-        public int Health { get; private set; } = 2;
+        protected virtual int stepSize { get; } = 1; //protected anaknya bisa ngambil data dari ortunya, tapi kelas lain
+        //public int Health { get; private set; } = 2;
+        public virtual int Health { get; protected set; } = 2;
 
         public bool HasScored
         {
@@ -35,9 +37,9 @@ namespace tesOOP
             _path = path;
         }
 
-        public void Move()
-        {
-            _pathStep += 1;
+        public virtual void Move() //karena anaknya make method yang sama atau modif2 dikit, dikasih virtual
+		{
+            _pathStep += stepSize;
         }
 
         public MapLocation Location // *
@@ -48,7 +50,7 @@ namespace tesOOP
             }
         }
 
-        public void decreaseHealth(int factor)
+        public virtual void decreaseHealth(int factor) //karena anaknya make method yang sama atau modif2 dikit, dikasih virtual
         {
             Health -= factor;
         }
