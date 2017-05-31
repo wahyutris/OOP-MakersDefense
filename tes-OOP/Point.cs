@@ -20,7 +20,7 @@ namespace tesOOP
             return (int)Math.Sqrt(xDiffSquared + yDiffSquared);
         }
 
-        public int distanceTo(Point point)
+        public int distanceTo(Point point) //overloading
         {
             return distanceTo(point.X, point.Y);
         }

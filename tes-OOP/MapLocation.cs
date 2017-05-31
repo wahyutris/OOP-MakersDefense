@@ -8,5 +8,10 @@ namespace tesOOP
             if (!map.onMap(this)) //jika titik ini tidak di map
                 throw new OutOfBoundsException("point ga di map");
 		}
+
+		public bool inRangeOf(MapLocation mapLocation, int range)
+		{
+			return distanceTo(mapLocation) <= range;
+		}
     }
 }

@@ -51,9 +51,39 @@ namespace tesOOP
 					new MapLocation(7, 2, map)
 				});
 
-                MapLocation location = path.getLocationAt(0); // sama dengan MapLocation location = new MapLocation(0, 2, map);
+                //MapLocation location = path.getLocationAt(0); // sama dengan MapLocation location = new MapLocation(0, 2, map);
+                //Console.WriteLine(location.X + " , " + location.Y);
 
-				Console.WriteLine(location.X + " , " + location.Y);
+                Invader[] invaders =
+                {
+                    new Invader(path),
+                    new Invader(path),
+                    new Invader(path),
+                    new Invader(path),
+                    new Invader(path),
+                    new Invader(path),
+                    new Invader(path)
+                };
+
+                Tower[] towers =
+                {
+                    new Tower(new MapLocation(1,3,map)),
+                    new Tower(new MapLocation(3,3,map)),
+                    new Tower(new MapLocation(5,3,map)),
+                    new Tower(new MapLocation(2,1,map)),
+                    new Tower(new MapLocation(4,1,map))
+                };
+
+                Level level = new Level(invaders)
+                {
+                    Towers = towers
+                };
+
+                bool playerStatus = level.Play();
+
+                Console.WriteLine();
+                Console.WriteLine("----------- RESULT -------------");
+                Console.WriteLine("Players " + (playerStatus ? "won" : "lost"));
             }
 
             catch (OutOfBoundsException ex)
@@ -69,9 +99,7 @@ namespace tesOOP
             catch (Exception ex)
             {
                 Console.WriteLine("Exception lv3 = " + ex.Message);
-            }
-
-			
+            }			
         }
     }
 }
