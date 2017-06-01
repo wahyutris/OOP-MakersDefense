@@ -68,11 +68,11 @@ namespace tesOOP
                 Tower[] towers =
                 {
                     new Tower(new MapLocation(1,3,map)),
-                    new Tower(new MapLocation(2,1,map)),
+                    new SniperTower(new MapLocation(6,1,map)),
                     new Tower(new MapLocation(3,3,map)),
-                    new Tower(new MapLocation(4,1,map)),
+                    new StrongTower(new MapLocation(4,1,map)),
                     new Tower(new MapLocation(5,3,map)),
-                    new Tower(new MapLocation(6,1,map)),
+                    new LongRangeTower(new MapLocation(2,1,map)),
                     new Tower(new MapLocation(7,3,map))
                 };
 
